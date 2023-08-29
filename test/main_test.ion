@@ -1,0 +1,6 @@
+import libc {strcmp}
+import main {init_stream, token_info, next_token}
+
+func main_test() {
+    lexer_test();
+}

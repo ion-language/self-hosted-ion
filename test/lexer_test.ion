@@ -1,0 +1,77 @@
+func lexer_test() {
+    code := """
+        #include <stdio.h>
+
+        int main(int argc, char **argv) {
+            printf("Hello, world!\n");
+            return 0;
+        }
+    """;
+
+    init_stream("test.ion", code);
+
+    // Check #include <stdio.h>
+    #assert(token_info() == "#");
+    next_token();
+    #assert(strcmp(token_info(), "include") == 0);
+    next_token();
+    #assert(token_info() == "<");
+    next_token();
+    #assert(strcmp(token_info(), "stdio") == 0);
+    next_token();
+    #assert(token_info() == ".");
+    next_token();
+    #assert(strcmp(token_info(), "h") == 0);
+    next_token();
+    #assert(token_info() == ">");
+    next_token();
+    
+    // Check int main(int argc, char **argv) {
+    #assert(strcmp(token_info(), "int") == 0);
+    next_token();
+    #assert(strcmp(token_info(), "main") == 0);
+    next_token();
+    #assert(token_info() == "(");
+    next_token();
+    #assert(strcmp(token_info(), "int") == 0);
+    next_token();
+    #assert(strcmp(token_info(), "argc") == 0);
+    next_token();
+    #assert(token_info() == ",");
+    next_token();
+    #assert(strcmp(token_info(), "char") == 0);
+    next_token();
+    #assert(token_info() == "*");
+    next_token();
+    #assert(token_info() == "*");
+    next_token();
+    #assert(strcmp(token_info(), "argv") == 0);
+    next_token();
+    #assert(token_info() == ")");
+    next_token();
+    #assert(token_info() == "{");
+    next_token();
+    
+    // Check printf("Hello, world!\n");
+    #assert(strcmp(token_info(), "printf") == 0);
+    next_token();
+    #assert(token_info() == "(");
+    next_token();
+    #assert(strcmp(token_info(), "string") == 0);
+    next_token();
+    #assert(token_info() == ")");
+    next_token();
+    #assert(token_info() == ";");
+    next_token();
+    
+    // Check return 0;
+    #assert(strcmp(token_info(), "return") == 0);
+    next_token();
+    #assert(strcmp(token_info(), "int") == 0);
+    next_token();
+    #assert(token_info() == ";");
+    next_token();
+    
+    // Check closing bracket
+    #assert(token_info() == "}");
+}

@@ -144,7 +144,7 @@ typedef struct main_Arena main_Arena;
 typedef struct libc_VAList libc_VAList;
 typedef struct main_BufHdr main_BufHdr;
 
-#line 83 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosting-ion\\main\\main.ion"
+#line 5 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosted-ion\\main\\main.ion"
 void main(int argc, char (*argv));
 
 #line 1 "C:\\SRC\\ion\\system_packages\\builtin\\config_win32.ion"
@@ -290,8 +290,8 @@ struct any {
     typeid type;
 };
 
-#line 5 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosting-ion\\main\\main.ion"
-void main_lexer_test(void);
+#line 4 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosted-ion\\test\\main_test.ion"
+void test_main_test(void);
 
 #line 30 "C:\\SRC\\ion\\system_packages\\builtin\\typeinfo.ion"
 struct TypeFieldInfo {
@@ -318,7 +318,10 @@ struct TypeInfo {
     int num_enum_items;
 };
 
-#line 839 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosting-ion\\main\\lexer.ion"
+#line 1 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosted-ion\\test\\lexer_test.ion"
+void test_lexer_test(void);
+
+#line 839 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosted-ion\\main\\lexer.ion"
 void main_init_stream(char (*name), char (*buf));
 
 #line 331
@@ -441,10 +444,10 @@ void main_scan_float(void);
 #line 358
 void main_scan_int(void);
 
-#line 430 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosting-ion\\main\\common.ion"
+#line 430 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosted-ion\\main\\common.ion"
 char (*main_str_intern_range(char (*start), char (*end)));
 
-#line 89 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosting-ion\\main\\lexer.ion"
+#line 89 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosted-ion\\main\\lexer.ion"
 bool main_is_keyword_name(char (*name));
 
 #line 114
@@ -623,13 +626,13 @@ int main_scan_hex_escape(void);
 #line 468
 extern char (main_escape_to_char[256]);
 
-#line 181 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosting-ion\\main\\common.ion"
+#line 181 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosted-ion\\main\\common.ion"
 void main_buf_push(void (*(*b)), void (*elem), size_t elem_size);
 
-#line 339 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosting-ion\\main\\lexer.ion"
+#line 339 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosted-ion\\main\\lexer.ion"
 extern uint8_t (main_char_to_digit[256]);
 
-#line 303 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosting-ion\\main\\common.ion"
+#line 303 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosted-ion\\main\\common.ion"
 uint64_t main_hash_bytes(void (*ptr), size_t len);
 
 #line 391
@@ -669,7 +672,7 @@ extern main_Arena main_intern_arena;
 #line 395
 void main_map_put_from_uint64(main_Map (*map), uint64_t key, void (*val));
 
-#line 26 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosting-ion\\main\\lexer.ion"
+#line 26 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosted-ion\\main\\lexer.ion"
 extern char (*main_first_keyword);
 
 #line 27
@@ -681,10 +684,10 @@ struct libc_VAList {
     char (*bytes);
 };
 
-#line 312 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosting-ion\\main\\lexer.ion"
+#line 312 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosted-ion\\main\\lexer.ion"
 void main_verror(main_SrcPos pos, char (*fmt), va_list args);
 
-#line 173 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosting-ion\\main\\common.ion"
+#line 173 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosted-ion\\main\\common.ion"
 void main_buf_fit(void (*(*b)), size_t new_len, size_t elem_size);
 
 #line 145
@@ -719,10 +722,10 @@ void (*main_align_down_ptr(void (*p), size_t a));
 #line 357
 void main_map_put_uint64_from_uint64(main_Map (*map), uint64_t key, uint64_t val);
 
-#line 296 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosting-ion\\main\\lexer.ion"
+#line 296 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosted-ion\\main\\lexer.ion"
 void main_vnotice(char (*level), main_SrcPos pos, char (*fmt), va_list args);
 
-#line 150 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosting-ion\\main\\common.ion"
+#line 150 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosted-ion\\main\\common.ion"
 size_t main_buf_cap(void (*b));
 
 #line 189
@@ -752,10 +755,10 @@ uintptr_t main_align_down(uintptr_t n, size_t a);
 #line 340
 void main_map_grow(main_Map (*map), size_t new_cap);
 
-#line 275 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosting-ion\\main\\lexer.ion"
+#line 275 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosted-ion\\main\\lexer.ion"
 extern main_SrcPos main_pos_builtin;
 
-#line 7 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosting-ion\\main\\common.ion"
+#line 7 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosted-ion\\main\\common.ion"
 size_t main_max(size_t x, size_t y);
 
 #line 65
@@ -1093,9 +1096,9 @@ TypeInfo *typeinfo_table[264] = {
 
 int num_typeinfos = 264;
 TypeInfo **typeinfos = (TypeInfo **)typeinfo_table;
-#line 83 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosting-ion\\main\\main.ion"
+#line 5 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosted-ion\\main\\main.ion"
 void main(int argc, char (*argv)) {
-    main_lexer_test();
+    test_main_test();
 }
 
 char (*IONOS) = "win32";
@@ -1136,8 +1139,13 @@ size_t layout_struct(TypeFieldInfo (*fields), size_t num_fields) {
     return alignment;
 }
 
-#line 5 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosting-ion\\main\\main.ion"
-void main_lexer_test(void) {
+#line 4 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosted-ion\\test\\main_test.ion"
+void test_main_test(void) {
+    test_lexer_test();
+}
+
+#line 1 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosted-ion\\test\\lexer_test.ion"
+void test_lexer_test(void) {
     char (*code) = 
         "\n"
         "        #include <stdio.h>\n"
@@ -1148,7 +1156,7 @@ void main_lexer_test(void) {
         "        }\n"
         "    ";
     main_init_stream("test.ion", code);
-    #line 18
+    #line 14
     assert((main_token_info()) == ("#"));
     main_next_token();
     assert((strcmp(main_token_info(), "include")) == (0));
@@ -1163,7 +1171,7 @@ void main_lexer_test(void) {
     main_next_token();
     assert((main_token_info()) == (">"));
     main_next_token();
-    #line 34
+    #line 30
     assert((strcmp(main_token_info(), "int")) == (0));
     main_next_token();
     assert((strcmp(main_token_info(), "main")) == (0));
@@ -1188,7 +1196,7 @@ void main_lexer_test(void) {
     main_next_token();
     assert((main_token_info()) == ("{"));
     main_next_token();
-    #line 60
+    #line 56
     assert((strcmp(main_token_info(), "printf")) == (0));
     main_next_token();
     assert((main_token_info()) == ("("));
@@ -1199,18 +1207,18 @@ void main_lexer_test(void) {
     main_next_token();
     assert((main_token_info()) == (";"));
     main_next_token();
-    #line 72
+    #line 68
     assert((strcmp(main_token_info(), "return")) == (0));
     main_next_token();
     assert((strcmp(main_token_info(), "int")) == (0));
     main_next_token();
     assert((main_token_info()) == (";"));
     main_next_token();
-    #line 80
+    #line 76
     assert((main_token_info()) == ("}"));
 }
 
-#line 839 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosting-ion\\main\\lexer.ion"
+#line 839 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosted-ion\\main\\lexer.ion"
 void main_init_stream(char (*name), char (*buf)) {
     main_stream = buf;
     main_line_start = main_stream;
@@ -1844,7 +1852,7 @@ void main_scan_int(void) {
     }
 }
 
-#line 430 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosting-ion\\main\\common.ion"
+#line 430 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosted-ion\\main\\common.ion"
 char (*main_str_intern_range(char (*start), char (*end))) {
     size_t len = (end) - (start);
     ullong hash = main_hash_bytes(start, len);
@@ -1864,7 +1872,7 @@ char (*main_str_intern_range(char (*start), char (*end))) {
     return new_intern->str;
 }
 
-#line 89 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosting-ion\\main\\lexer.ion"
+#line 89 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosted-ion\\main\\lexer.ion"
 bool main_is_keyword_name(char (*name)) {
     return ((main_first_keyword) <= (name)) && ((name) <= (main_last_keyword));
 }
@@ -1901,7 +1909,7 @@ int main_scan_hex_escape(void) {
 }
 
 char (main_escape_to_char[256]) = {['0'] = '\0', ['\''] = '\'', ['\"'] = '\"', ['\\'] = '\\', ['n'] = '\n', ['r'] = '\r', ['t'] = '\t', ['v'] = '\v', ['b'] = '\b', ['a'] = '\a'};
-#line 181 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosting-ion\\main\\common.ion"
+#line 181 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosted-ion\\main\\common.ion"
 void main_buf_push(void (*(*b)), void (*elem), size_t elem_size) {
     main_buf_fit(b, (1) + (main_buf_len(*(b))), elem_size);
     memcpy(((char *)(*(b))) + ((elem_size) * ((main_buf__hdr(*(b))->len)++)), elem, elem_size);
@@ -1947,12 +1955,12 @@ void main_map_put_from_uint64(main_Map (*map), uint64_t key, void (*val)) {
 
 char (*main_first_keyword);
 char (*main_last_keyword);
-#line 312 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosting-ion\\main\\lexer.ion"
+#line 312 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosted-ion\\main\\lexer.ion"
 void main_verror(main_SrcPos pos, char (*fmt), va_list args) {
     main_vnotice("error", pos, fmt, args);
 }
 
-#line 173 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosting-ion\\main\\common.ion"
+#line 173 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosted-ion\\main\\common.ion"
 void main_buf_fit(void (*(*b)), size_t new_len, size_t elem_size) {
     if ((new_len) > (main_buf_cap(*(b)))) {
         *(b) = main_buf__grow(*(b), new_len, elem_size);
@@ -2035,7 +2043,7 @@ void main_map_put_uint64_from_uint64(main_Map (*map), uint64_t key, uint64_t val
     }
 }
 
-#line 296 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosting-ion\\main\\lexer.ion"
+#line 296 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosted-ion\\main\\lexer.ion"
 void main_vnotice(char (*level), main_SrcPos pos, char (*fmt), va_list args) {
     if ((pos.name) == (NULL)) {
         pos = main_pos_builtin;
@@ -2045,7 +2053,7 @@ void main_vnotice(char (*level), main_SrcPos pos, char (*fmt), va_list args) {
     printf("\n");
 }
 
-#line 150 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosting-ion\\main\\common.ion"
+#line 150 "C:\\Users\\mlb\\Documents\\DEV\\github\\ion\\self-hosted-ion\\main\\common.ion"
 size_t main_buf_cap(void (*b)) {
     return (b ? main_buf__hdr((void *)(b))->cap : 0);
 }
